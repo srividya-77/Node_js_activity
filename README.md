@@ -1,83 +1,35 @@
-# 🎓 Smart Student Profile
+# Node_js_activity
 
-A clean, professional React.js application to manage student profiles with Supabase as the cloud backend.
+A student profile management app backed by Supabase, with setup and usage documentation.
 
----
+## What it does
 
-## ✨ Features
+The `smart-student-profile` app lets you browse a list of students, view an individual profile, and edit it. The three main views are a student list, a profile detail page, and an edit form. Data is stored in and fetched from a Supabase database.
 
-- 📋 Browse all student profiles in a responsive card grid
-- 👤 Click any student to view their full profile
-- ✏️ Edit student details via a pre-filled form
-- ☁️ Save updates directly to Supabase in real-time
+The `docs` folder contains setup and usage guides:
+- `setup.md` — project setup steps
+- `supabase-setup.md` — how to configure the Supabase project
+- `project-structure.md` — directory layout explanation
+- `user-manual.md` — how to use the app
 
----
+## Built with
 
-## 🛠 Tech Stack
+- React 19 (frontend)
+- Vite (build tool)
+- Tailwind CSS (styling)
+- Supabase (`@supabase/supabase-js`) (database and backend)
 
-| Layer | Technology |
-|---|---|
-| Frontend | React.js (Vite) |
-| Styling | Tailwind CSS |
-| Backend / DB | Supabase (PostgreSQL) |
-
----
-
-## 📁 Project Structure
-
-```
-Node_js_activity/
-├── README.md
-├── docs/
-│   ├── setup.md               # Local dev setup
-│   ├── supabase-setup.md      # DB table & seed data
-│   ├── project-structure.md   # Codebase overview
-│   └── user-manual.md         # How to use the app
-└── smart-student-profile/
-    ├── .env                   # Supabase keys (not committed)
-    ├── src/
-    │   ├── lib/
-    │   │   └── supabaseClient.js
-    │   ├── components/
-    │   │   ├── StudentList.jsx
-    │   │   ├── StudentProfile.jsx
-    │   │   └── EditForm.jsx
-    │   ├── App.jsx
-    │   └── main.jsx
-    └── package.json
-```
-
----
-
-## 🚀 Quick Start
+## How to run
 
 ```bash
-cd smart-student-profile
+cd Node_js_activity/smart-student-profile
 npm install
+```
+
+Create a `.env` file with your Supabase project URL and anon key (see `docs/supabase-setup.md`), then:
+
+```bash
 npm run dev
 ```
 
-Full setup → [docs/setup.md](docs/setup.md)
-
-Supabase setup → [docs/supabase-setup.md](docs/supabase-setup.md)
-
-User manual → [docs/user-manual.md](docs/user-manual.md)
-
----
-
-## ⚙️ Environment Variables
-
-Create a `.env` file in `smart-student-profile/`:
-
-```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-> Get these from your Supabase dashboard → Settings → API
-
----
-
-## 📄 License
-
-MIT
+The app will be available at `http://localhost:5173`.
